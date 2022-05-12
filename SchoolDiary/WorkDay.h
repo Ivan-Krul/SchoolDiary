@@ -12,16 +12,18 @@ class WorkDay
     Lesson& SearchLesson_Number(int Filter);
 
 public:
-    WorkDay(int LessonSize);
+	WorkDay() {}
+	void Init(int LessonSize);
 
 	void WriteHomework(string TypeLesson);
 	void WriteHomework(int NumLes);
 
-	Lesson& ReadLesson(string TypeLesson);
-	Lesson& ReadLesson(int NumLes);
+	void WriteTypeLesson(int NumLes, string TypeLesson);
+	void WriteTypeLesson(int NumLes);
 
-	~WorkDay() {
-		delete[] pmLesson;
-	}
+	Lesson& ReadLesson(string TypeLesson) { return SearchLesson_TypeLesson(TypeLesson); }
+	Lesson& ReadLesson(int NumLes) { return SearchLesson_Number(NumLes); }
+
+	~WorkDay() { delete[] pmLesson; }
 };
 

@@ -143,12 +143,14 @@
     <ClCompile Include="Lesson.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="WorkDay.cpp" />
+    <ClCompile Include="WorkWeek.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Date.h" />
     <ClInclude Include="Edit.h" />
     <ClInclude Include="Lesson.h" />
     <ClInclude Include="WorkDay.h" />
+    <ClInclude Include="WorkWeek.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

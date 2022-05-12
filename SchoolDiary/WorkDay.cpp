@@ -22,15 +22,26 @@ void WorkDay::WriteHomework(string TypeLesson) {
     Edit(soup.Homework());
 }
 
+void WorkDay::WriteHomework(int NumLes) {
+    Lesson& soup = SearchLesson_Number(NumLes);
+    Edit(soup.Homework());
+}
+
+void WorkDay::WriteTypeLesson(int NumLes, string TypeLesson) {
+    Lesson& soup = SearchLesson_Number(NumLes);
+    soup.TypeLesson() = TypeLesson;
+}
+
 Lesson& WorkDay::ReadLesson(int NumLes) {
     return SearchLesson_Number(NumLes);
 }
 
-Lesson& WorkDay::ReadLesson(string TypeLesson) {
-    return SearchLesson_TypeLesson(TypeLesson);
+void WorkDay::WriteTypeLesson(int NumLes) {
+    Lesson& soup = SearchLesson_Number(NumLes);
+    Edit(soup.TypeLesson());
 }
 
-WorkDay::WorkDay(int LessonSize) {
+void WorkDay::Init(int LessonSize) {
 	this->LessonSize = LessonSize;
 	pmLesson = new Lesson[this->LessonSize];
 }
